@@ -39,10 +39,10 @@ export default function MovieDetailsPage(props) {
       )}
       <div style={{ width: "85%", margin: "1rem auto" }}>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-       <Favourite
+     {localStorage.getItem('userId') &&  <Favourite
        userFrom={localStorage.getItem('userId')}
      movieInfo={Movie}
-        movieId ={props.match.params.moviesId}/>
+        movieId ={props.match.params.moviesId}/>}
         </div>
         {Movie && (
           <Descriptions title="Movie Info" bordered>

@@ -14,8 +14,9 @@ function RightMenu(props) {
   const logoutHandler = () => {
     axios.get(`${USER_SERVER}/logout`).then(response => {
       if (response.status === 200) {
+        localStorage.clear()
         props.history.push("/login");
-        console.log("successfullly logout ");
+
       } else {
         alert('Log Out Failed')
       }
