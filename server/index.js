@@ -22,9 +22,7 @@ const mongoose = require("mongoose");
 //   })
 //   .then(() => console.log('MongoDB Connected...'))
 //   .catch(err => console.log(err));
-mongoose
-  .connect(
-    process.env.MONGODB_URI ||
+mongoose.connect(process.env.MONGODB_URI ||
       "mongodb+srv://dival:1234@cluster0-30bkx.mongodb.net/moviedb?retryWrites=true&w=majority",
 
     {
