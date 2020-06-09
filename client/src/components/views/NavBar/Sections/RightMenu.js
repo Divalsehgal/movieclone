@@ -35,6 +35,8 @@ function RightMenu(props) {
       </Menu>
     )
   } else {
+    console.log("else part")
+
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="logout">
