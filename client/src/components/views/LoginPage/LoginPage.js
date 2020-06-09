@@ -51,7 +51,6 @@ function LoginPage(props) {
                 } else {
                   localStorage.removeItem('rememberMe');
                 }
-                console.log("successfullly login ");
 
                 props.history.push("/");
               } else {

@@ -19,7 +19,6 @@ fetchMovies(endPoint)
     fetch(endPoint)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
      //   setMovies([...Movies.concat(response.results)]);
         setMovies([...Movies,...response.results]);
 

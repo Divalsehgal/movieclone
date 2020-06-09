@@ -12,7 +12,6 @@ export default function MovieDetailsPage(props) {
 
   useEffect(() => {
     const movieId = props.match.params.moviesId;
-    console.log(movieId);
     fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US&page=1`)
       .then((response) => response.json())
       .then((response) => {
@@ -20,7 +19,6 @@ export default function MovieDetailsPage(props) {
         fetch(`${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`)
           .then((response) => response.json())
           .then((response) => {
-            console.log(response);
             setCrews(response.cast);
           });
       });

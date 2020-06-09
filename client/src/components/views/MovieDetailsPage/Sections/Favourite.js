@@ -16,7 +16,6 @@ export default function Favourite(props) {
   useEffect(() => {
     axios.post(`/api/favourite/favoriteNumber`, variable).then((response) => {
       if (response.data.success) {
-        console.log("fno")
         setfavouriteNumber(response.data.favouriteNumber);
       } else {
         alert("Failed to get favourite Number  ");
@@ -24,7 +23,6 @@ export default function Favourite(props) {
     });
     axios.post(`/api/favourite/favorited`, variable).then((response) => {
       if (response.data.success) {
-        console.log("favourited")
         setfavourited(response.data.favourited);
       } else {
         alert("Failed to get favourite Info ");
